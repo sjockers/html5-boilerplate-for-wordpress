@@ -30,7 +30,21 @@ function mytheme_comment($comment, $args, $depth) {
 <?php
 }
 
-automatic_feed_links();
+
+// remove "Upload/Edit" from backend
+add_action( 'media_buttons_context' , 'remove_mediabuttons' );
+function remove_mediabuttons() {
+	return;
+}
+
+
+// remove comment feed from header
+automatic_feed_links(false);
+
+
+// Support for thumbnails
+add_theme_support( 'post-thumbnails', array( 'post') ); // Add more content types here...
+
 
 // Widgetized Sidebar HTML5 Markup
 if ( function_exists('register_sidebar') ) {
