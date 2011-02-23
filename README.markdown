@@ -1,15 +1,24 @@
+Disclaimer
+----------
+*In contrast to the original HTML5 Boilerplate, this fork doesn't use structural HTML5 tags. I also got rid of some other things, such as Conditional Comments.*
+
+**If you want the real deal, check out [Paul Irish's original code](https://github.com/paulirish/html5-boilerplate) or [Steve Heffernan's wordpress theme](https://github.com/zencoder/html5-boilerplate-for-wordpress)!**
+
 HTML5 Boilerplate for Wordpress
 ===============================
-
 This theme is built on the [HTML5 Boilerplate](http://html5boilerplate.com/) by Paul Irish and Divya Manian. The sole purpose of this theme is to save developers the time it takes to apply the HTML5 Boilerplate to WordPress. The "HTML5 Boilerplate" name is used with permission from Paul Irish.
 
 The layout is based on Bruce Lawson's [Designing a Blog with HTML5](http://html5doctor.com/designing-a-blog-with-html5/)
 
+<strike>
 Instead of using only DIVs for content layout, it uses new HTML5 tags, including [header](http://html5doctor.com/the-header-element/), 
 [footer](http://www.w3schools.com/html5/tag_footer.asp), 
 [nav](http://www.w3schools.com/html5/tag_nav.asp), 
 [article](http://www.w3schools.com/html5/tag_article.asp), 
 and [section](http://html5doctor.com/the-section-element/).
+</strike>
+
+*This fork has a less aggressive approach than the original HTML5 Boilerplate. It doesn't use any structural HTML5 tags such as `<header>`, `<article>` etc. It maps structural elements to class names instead (e.g. `<div class="header">`). Therefore it has no compatibility issues with IE<9 /w JavaScript disabled.* 
 
 It's a very bare layout, including only the base styles that come with the boilerplate and required WordPress styles, so layout is up to you. Alternatively, you could apply the methods used here to other themes.
 
