@@ -13,7 +13,7 @@
   <meta name="description" content="">
 
   <!--  Mobile Viewport Fix
-        j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
+  j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
   device-width : Occupy full width of the screen in its current orientation
   initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
   maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
@@ -24,11 +24,24 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <!-- CSS : implied media="all" -->
-  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/style.css") ?>
 
-  <!-- For the less-enabled mobile browsers like Opera Mini -->
-  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/handheld.css", 'media="handheld"') ?>
+  <!-- Boilerplate stylesheet (implied media="all" – targets mobile browsers as well as desktops) -->
+  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/boilerplate.css") ?>
+
+  <!-- Mobile First! (implied media="all" – targets mobile browsers as well as desktops) -->
+  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/mobile-first.css") ?>
+
+  <!-- Aditional styles for modern desktop browsers and tablets (screen width >768px) -->
+  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/desktop.css", 'media="screen and (min-device-width: 768px)"') ?>
+
+  <!-- Sure, we also remember Internet Explorer -->
+  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/desktop.css") ?>
+	<!--[if lt IE 9]>
+	<link href="desktop.css" media="screen" rel="stylesheet">
+	<![endif]-->
+	
+  <!-- print stylesheet -->
+  <?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/css/print.css", 'media="print"') ?>	
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."html5-boilerplate/js/modernizr-1.5.min.js") ?>
