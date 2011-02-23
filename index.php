@@ -10,27 +10,27 @@ get_header(); ?>
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
 
-      <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-        <header>
+      <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+        <div class="header">
           <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
           <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('F jS, Y') ?></time>
           <span class="author">by <?php the_author() ?></span>
-        </header>
+        </div>
         <?php the_content('Read the rest of this entry &raquo;'); ?>
-        <footer>
+        <div class="footer">
           <?php the_tags('Tags: ', ', ', '<br />'); ?> 
           Posted in <?php the_category(', ') ?>
           | <?php edit_post_link('Edit', '', ' | '); ?>
           <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-        </footer>
-      </article>
+        </div>
+      </div>
 
     <?php endwhile; ?>
 
-    <nav>
+    <div class="nav">
       <div><?php next_posts_link('&laquo; Older Entries') ?></div>
       <div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-    </nav>
+    </div>
 
   <?php else : ?>
 
