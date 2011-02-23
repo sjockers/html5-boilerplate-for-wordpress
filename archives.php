@@ -14,19 +14,19 @@ Template Name: Archives
 
   <?php get_search_form(); ?>
 
-  <section>
+  <div class="section">
     <h2>Archives by Month:</h2>
     <ul>
       <?php wp_get_archives('type=monthly'); ?>
     </ul>
-  </section>
+  </div>
 
-  <section>
+  <div class="section">
     <h2>Archives by Subject:</h2>
     <ul>
       <?php wp_list_categories(); ?>
     </ul>
-  </section>
+  </div>
 
 </div>
 
